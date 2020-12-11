@@ -22,7 +22,7 @@ setup(
     zip_safe=False,
     install_requires=["cloudkeeper", "kubernetes"],
     setup_requires=["pytest-runner"],
-    tests_require=["pytest"],
+    tests_require=["pytest", "pytest-cov", "tox", "pytest-kind"],
     classifiers=[
         # Current project status
         "Development Status :: 4 - Beta",

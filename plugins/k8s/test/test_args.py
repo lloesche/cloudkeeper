@@ -2,10 +2,12 @@ from cloudkeeper.args import get_arg_parser, ArgumentParser
 from cloudkeeper_plugin_k8s import KubernetesCollectorPlugin
 
 
+arg_parser = get_arg_parser()
+KubernetesCollectorPlugin.add_args(arg_parser)
+arg_parser.parse_args()
+
+
 def test_args():
-    arg_parser = get_arg_parser()
-    KubernetesCollectorPlugin.add_args(arg_parser)
-    arg_parser.parse_args()
     assert len(ArgumentParser.args.k8s_context) == 0
     assert ArgumentParser.args.k8s_config is None
     assert len(ArgumentParser.args.k8s_cluster) == 0
