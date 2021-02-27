@@ -22,3 +22,6 @@ venv*
 .vscode/
 /config/
 *.code-workspace
+.pytest-kind
+.kube
+.coverage
